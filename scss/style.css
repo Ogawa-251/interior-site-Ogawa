@@ -1,0 +1,230 @@
+@charset "UTF-8";
+/* CSS Document */
+html {
+  font-size: 62.5%;
+  /* 16px * 62.5% = 10px */
+  width: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth; /* スムーズスクロールを有効にする */
+  font-family: "Lora", serif;
+}
+
+body {
+  color: #2c1f1e;
+  background-color: #f9f7f7;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent; /* 背景を透明に */
+  z-index: 1000; /* 他の要素より手前に表示 */
+}
+
+.header-bg {
+  width: 100%;
+  height: 100px;
+}
+
+.header-text {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0 auto;
+}
+.header-text ul {
+  display: flex;
+}
+.header-text ul li {
+  list-style: none;
+}
+.header-text ul li a {
+  font-size: 1.8rem;
+  margin-left: 55px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 560px) {
+  .header-text ul li a {
+    font-size: 1.4rem;
+  }
+}
+.section1 {
+  font-size: 4rem;
+  width: 100%;
+  position: relative;
+}
+.section1 .abs {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+.section1 .abs p {
+  z-index: 100;
+  color: #ffffff;
+  margin: 0 auto;
+  display: grid;
+  place-content: center;
+}
+.section1-img-box {
+  width: 100%;
+}
+.section1-img-box img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* オーバーレイ */
+.image-container {
+  position: relative;
+}
+
+.image-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(84, 75, 72, 0.5); /* 黒色の半透明オーバーレイ */
+  z-index: 1; /* 画像より前に表示 */
+}
+
+/* 画像を表示 */
+.image-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+  z-index: 2; /* オーバーレイより前に表示 */
+}
+
+@media screen and (max-width: 1080px) {
+  .section1 .abs p {
+    font-size: 2.6rem;
+  }
+}
+@media screen and (max-width: 760px) {
+  .section1 .abs p {
+    font-size: 2.2rem;
+  }
+}
+.section2 {
+  width: 100%;
+}
+.section2-img-box {
+  width: 100%;
+  height: 70%;
+}
+.section2-img-box img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.section4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  gap: 80px;
+  padding: 80px 0 80px 0;
+}
+.section4-text-h2 {
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 160%;
+  margin-bottom: 20px;
+}
+.section4-text-p1 {
+  font-size: 1.8rem;
+  line-height: 160%;
+}
+.section4-text-p2 {
+  font-size: 1.8rem;
+  line-height: 160%;
+}
+.section4-img-box img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.section4-2 {
+  flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 1080px) {
+  .section4 {
+    gap: 60px;
+    padding: 60px 0 60px 0;
+  }
+  .section4-text-h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 130%;
+    margin-bottom: 20px;
+  }
+  .section4-text-p1 {
+    font-size: 1.6rem;
+    line-height: 140%;
+  }
+  .section4-text-p2 {
+    font-size: 1.6rem;
+    line-height: 140%;
+  }
+}
+@media screen and (max-width: 760px) {
+  .section4,
+.section4-2 {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+}
+.footer {
+  width: 100%;
+  height: 100px;
+  background-color: #cdc2bf;
+}
+.footer-menu {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+.footer-menu li a {
+  text-decoration: none;
+  font-size: 2rem;
+  margin: 30px;
+  color: #3a291c;
+}
+.footer .copyright {
+  margin: 0 auto;
+  display: block;
+  font-size: 1.6rem;
+  text-align: center;
+  background-color: #cdc2bf;
+  padding: 10px 0 30px 0;
+  color: #3a291c;
+}
+
+@media screen and (max-width: 900px) {
+  .footer li a {
+    font-size: 1.4rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,27 @@
+/* スライド共通のスタイル */
+.splide__slide img {
+    opacity: .3; /* 左右のスライドを薄くする */
+    transform: scale(.8); /* 左右のスライドを小さくする */
+    transition: .7s; /* ゆっくり小さくさせる */
+  }
+  /* アクティブなスライドのスタイル */
+  .splide__slide.is-active img {
+    opacity: 1; /* 中央のスライドは薄くしない */
+    transform: scale(1); /* 中央のスライドは小さくしない */
+    z-index: 1; /* 中央のスライドを一番上にする */
+  }
+  /* スライドのサイズ調整 */
+  .splide__slide img {
+    height: auto;
+    width: 100%;
+  }
+  /* レイアウトの為のスタイル */
+  .wrapper {
+    margin-inline: auto;
+    margin-top: 10px;
+    width: 80%;
+    padding: 100px 0 100px 0;
+    margin: 0 auto;
+  }
+
+
